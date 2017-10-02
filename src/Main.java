@@ -11,17 +11,17 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String filePath = "";
-        if(args.length == 3 ){
+        String filePath;
+        if(args.length == 1){
             filePath = args[0];
-        }else if(args.length <= 2){
-            filePath = "/Users/satopi/Desktop/programing/java/Comments/src/examples/EtRobocon2017.h";
+//        }else if(args.length <= 2){
+//            filePath = "/Users/satopi/Desktop/programing/java/Comments/src/examples/EtRobocon2017.h";
+          start(filePath);
         }else{
            System.out.println("引数の数が違います");
         }
-        start(filePath);
     }
-    public static void start(String filePath){
+    private static void start(String filePath){
 
         // create a CharStream that reads from standard input
         try {
@@ -41,7 +41,7 @@ public class Main {
             walker.walk(extractor,tree);
 
             //構文木を表示
-            Trees.inspect(tree,parser);
+//            Trees.inspect(tree,parser);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
