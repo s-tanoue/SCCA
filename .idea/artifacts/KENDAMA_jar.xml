@@ -2,7 +2,7 @@
   <artifact type="jar" name="KENDAMA:jar">
     <output-path>$PROJECT_DIR$/../../../KENDAMA</output-path>
     <root id="archive" name="KENDAMA.jar">
-      <element id="module-output" name="Comments" />
+      <element id="module-output" name="KENDAMA" />
       <element id="extracted-dir" path="/usr/local/lib/antlr-4.7-complete.jar" path-in-jar="/" />
     </root>
   </artifact>

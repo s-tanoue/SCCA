@@ -6,6 +6,8 @@ Walker::Walker():
 }
 
 void Walker::init() {
+ int32_t tanoue;
+ int32_t Satoshi;
     init_f("Walker");
 }
 

@@ -16,6 +16,18 @@
 
 using namespace ev3api;
 
+enum TrafficLight
+{
+    RED,
+    YELLOG,
+    GREEN
+};
+
+struct Person {
+    char name[20];
+  // char sex;
+   double weight;
+};
 /**
 * Lコースを走らせるときに呼び出されるクラス
 */
@@ -23,16 +35,13 @@ class LeftCourse {
 public:
 	/** コンストラクタ。センサ類の初期化を行う */
 	LeftCourse();
-	/** 各エリアの処理を呼び出す */
 	void run(){
     	int a;
-	};
+	}
 	/** NormalCourseエリアの処理 */
 	void runNormalCourse();
 	void runTyokusen(float, float, bool);
 private:
-	Walker walker;
-    ColorSensor colorSensor;
     /** 自己位置推定 インスタンス 初期化*/
 	SelfLocalization sl;
 	Navigation navi;    	
