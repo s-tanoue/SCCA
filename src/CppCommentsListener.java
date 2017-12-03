@@ -8,8 +8,8 @@ import java.util.List;
  * Created by satopi on 2017/09/26.
  */
 public class CppCommentsListener extends CPP14BaseListener {
-    BufferedTokenStream tokens;
-    CPP14Parser parser;
+    private BufferedTokenStream tokens;
+    private CPP14Parser parser;
 
     public CppCommentsListener(BufferedTokenStream tokens, CPP14Parser parser) {
         this.tokens = tokens;
@@ -18,7 +18,7 @@ public class CppCommentsListener extends CPP14BaseListener {
     }
     //classの前
     @Override
-    public void enterClasshead(CPP14Parser.ClassheadContext ctx){
+    public void enterClasshead (CPP14Parser.ClassheadContext ctx){
         Token startToken = ctx.getStart();
         int i = startToken.getTokenIndex();
         //隠れているトークンを取得

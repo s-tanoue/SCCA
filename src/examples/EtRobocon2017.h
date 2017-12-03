@@ -31,8 +31,7 @@ public:
     void waitStarter( int );
     void loop(){
         int a=0;
-    };
-
+    }
 private:
     TouchSensor touchSensor;
     int8_t light_white;
