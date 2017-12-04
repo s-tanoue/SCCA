@@ -1,15 +1,12 @@
+import com.google.gson.Gson;
 import org.antlr.v4.gui.Trees;
-import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -37,16 +34,16 @@ public class Main {
             //h.ファイルと，cppファイルでリスナーを分ける．
             //リスナーをわけないと，木構造的に上手く動かない事がある．
 
-            //構文木を表示
-            Trees.inspect(tree,parser);
+            CommentsListener extractor = new CommentsListener(tokens,parser);
+            walker.walk(extractor,tree);
+            //結果をファイルに出力
+            File f = new File(filePath);
+            FileOutPuter fo = new FileOutPuter(f);
+            fo.outPutToFile(extractor.getResults());
 
-            if(filePath.contains(".h")){
-                HCommentsListener extractor = new HCommentsListener(tokens,parser);
-                walker.walk(extractor,tree);
-            }else{
-                CppCommentsListener extractor = new CppCommentsListener(tokens,parser);
-                walker.walk(extractor,tree);
-            }
+            //構文木を表示
+//            Trees.inspect(tree,parser);
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

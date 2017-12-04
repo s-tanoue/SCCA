@@ -1,20 +1,27 @@
+import com.google.gson.Gson;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 
-import java.lang.reflect.Member;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by satopi on 2017/09/26.
  */
-public class HCommentsListener extends CPP14BaseListener {
+public class CommentsListener extends CPP14BaseListener {
     private BufferedTokenStream tokens;
     private CPP14Parser parser;
     private ArrayList<String> results = new ArrayList<String>();
+    private InfoForNeedComments infoObj;
 
-    public HCommentsListener(BufferedTokenStream tokens, CPP14Parser parser) {
+    public CommentsListener(BufferedTokenStream tokens, CPP14Parser parser) {
         this.tokens = tokens;
         this.parser = parser;
+        readConfigFile("Config/ConfigForNeedComments.json");
         //TODO ここに設定ファイルをロードする処理を追加する．
     }
 
@@ -29,7 +36,7 @@ public class HCommentsListener extends CPP14BaseListener {
         getHiddenTokens(startToken, i);
     }
 
-    //classの前
+    //クラス名の前
     @Override
     public void enterClasshead(CPP14Parser.ClassheadContext ctx){
 
@@ -47,7 +54,7 @@ public class HCommentsListener extends CPP14BaseListener {
         //隠れているトークンを取得
         getHiddenTokens(startToken, i);
     }
-
+    //クラス名，関数宣言，変数宣言の前．
     @Override
     public void enterMemberdeclaration(CPP14Parser.MemberdeclarationContext ctx) {
         //TODO memberdeclartionで，simpletypespecifierになってるやつが変数名になる？
@@ -57,36 +64,54 @@ public class HCommentsListener extends CPP14BaseListener {
         //隠れているトークンを取得
         getHiddenTokens(startToken, i);
     }
-
     //変数宣言の前
     @Override
-    public void enterSimpletypespecifier(CPP14Parser.SimpletypespecifierContext ctx){
-        //FunctionDefinitionの最も左側のTokenを取得
-
-        // VocabularyImpl vocabulary = new VocabularyImpl();
+    public void enterSimpledeclaration(CPP14Parser.SimpledeclarationContext ctx) {
+        //TODO memberdeclartionで，simpletypespecifierになってるやつが変数名になる？
         Token startToken = ctx.getStart();
         int i = startToken.getTokenIndex();
 
         //隠れているトークンを取得
         getHiddenTokens(startToken, i);
     }
+
+    //変数宣言の前
+//    @Override
+//    public void enterSimpletypespecifier(CPP14Parser.SimpletypespecifierContext ctx){
+//        //FunctionDefinitionの最も左側のTokenを取得
+//
+//        // VocabularyImpl vocabulary = new VocabularyImpl();
+//        Token startToken = ctx.getStart();
+//        int i = startToken.getTokenIndex();
+//
+//        //隠れているトークンを取得
+//        getHiddenTokens(startToken, i);
+//    }
     //Loopの前
     @Override
     public void enterIterationstatement(CPP14Parser.IterationstatementContext ctx){
         //Iterationstatementの最も左側のTokenを取得
-        Token startToken = ctx.getStart();
-        int i = startToken.getTokenIndex();
-        //隠れているトークンを取得
-        getHiddenTokens(startToken, i);
+        if( infoObj.isIterationsStatement() ) {
+            Token startToken = ctx.getStart();
+            int i = startToken.getTokenIndex();
+            //隠れているトークンを取得
+            getHiddenTokens(startToken, i);
+        }
     }
     //if,switchの前
     @Override
     public void enterSelectionstatement(CPP14Parser.SelectionstatementContext ctx){
-        Token startToken = ctx.getStart();
+        if( infoObj.isSelectionsStatement() ) {
+            Token startToken = ctx.getStart();
+            int i = startToken.getTokenIndex();
+            //隠れているトークンを取得
+            getHiddenTokens(startToken, i);
 
-        int i = startToken.getTokenIndex();
-        //隠れているトークンを取得
-        getHiddenTokens(startToken, i);
+            if(ctx.Else() != null) {
+                Token elseToken = ctx.Else().getSymbol();
+                getHiddenTokens(elseToken, elseToken.getTokenIndex());
+            }
+        }
     }
 
     @Override
@@ -95,6 +120,33 @@ public class HCommentsListener extends CPP14BaseListener {
             System.out.println(result);
         }
 
+    }
+
+    public void readConfigFile(String path){
+
+        //BufferedReaderを作成．
+        BufferedReader bufferedReader = null;
+        try {
+            bufferedReader = new BufferedReader(new FileReader(path));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        StringBuilder builder = new StringBuilder();
+        String string = null;
+        try {
+            string = bufferedReader.readLine();
+            while (string != null){
+                builder.append(string + System.getProperty("line.separator"));
+                string = bufferedReader.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String json = builder.toString();
+        Gson gson = new Gson();
+        this.infoObj = gson.fromJson(json,InfoForNeedComments.class);
     }
 
     //隠れているトークンを取得
@@ -125,5 +177,10 @@ public class HCommentsListener extends CPP14BaseListener {
             }
         }
     }
+
+    public List<String> getResults(){
+        return this.results;
+    }
+
 
 }
