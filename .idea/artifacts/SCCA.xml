@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SCCA">
+    <output-path>$PROJECT_DIR$/../../../SCCA/</output-path>
+    <root id="archive" name="SCCA.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../../SCCA/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="SCCA" />
+      <element id="extracted-dir" path="/usr/local/lib/antlr-4.7-complete.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/local/lib/gson-2.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/local/lib/jcommander-1.72.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
