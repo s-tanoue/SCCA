@@ -1,24 +1,46 @@
-import com.google.gson.Gson;
-import org.antlr.v4.gui.Trees;
+import Parser.*;
+import com.beust.jcommander.JCommander;
+
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import File.*;
+import Command.*;
 
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        String filePath;
-        if(args.length == 1){
-            filePath = args[0];
-            start(filePath);
+    public static void main(String[] argv) throws Exception {
+        //jcommander : http://jcommander.org/#_overview
+        CommandMain commandMain = new CommandMain();
+        CommandNeed need = new CommandNeed();
+        CommandSpecific specific = new CommandSpecific();
+        JCommander jCommander = JCommander.newBuilder() .addObject(commandMain) .addCommand("need",need) .addCommand("specific",specific) .build();
+        jCommander.parse(argv);
+
+        if(jCommander.getParsedCommand() != null){
+            //コマンドラインオプションによって機能の切り替え
+            if(jCommander.getParsedCommand().equals("need")) {
+                for (String file : need.getFiles()) {
+                    CommentsListener extractor = start(file);
+                    //結果をファイルに出力
+                    if (commandMain.isOutput() || need.isOutput()) {
+                        File f = new File(file);
+                        FileOutPuter fo = new FileOutPuter(f);
+                        fo.outPutToFile(extractor.getResults());
+                    }
+                }
+            }else if(jCommander.getParsedCommand().equals("specific")) {
+                //TODO 特定のコメントを解析する機能をスタートさせる．
+            }
         }else{
-            System.out.println("引数の数が違います");
+            //TODO exceptionが出たときにもhelpを出すようにするべき？
+            jCommander.usage();
         }
     }
-    private static void start(String filePath){
+    private static CommentsListener start(String filePath){
         // create a CharStream that reads from standard input
         try {
             CharStream input = CharStreams.fromFileName(filePath);
@@ -33,22 +55,18 @@ public class Main {
             ParseTreeWalker walker = new ParseTreeWalker();
             //h.ファイルと，cppファイルでリスナーを分ける．
             //リスナーをわけないと，木構造的に上手く動かない事がある．
-
             CommentsListener extractor = new CommentsListener(tokens,parser);
             walker.walk(extractor,tree);
-            //結果をファイルに出力
-            File f = new File(filePath);
-            FileOutPuter fo = new FileOutPuter(f);
-            fo.outPutToFile(extractor.getResults());
-
             //構文木を表示
-//            Trees.inspect(tree,parser);
+            //Trees.inspect(tree,parser);
+            return extractor;
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        //これnullを返していいのか？
+        return null;
     }
 }

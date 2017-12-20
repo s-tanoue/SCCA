@@ -1,3 +1,5 @@
+package File;
+
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -12,7 +14,7 @@ public class FileOutPuter {
     //書き込むファイルのファイルパス
     private File newFilePath;
 
-    FileOutPuter(File filePath ){
+    public FileOutPuter(File filePath){
         this.filePath = filePath;
         this.fileName = filePath.getName();
 
@@ -21,7 +23,7 @@ public class FileOutPuter {
     }
     public void outPutToFile(List<String> results)  {
         try{
-            if (checkBeforeWritefile(newFilePath)){
+            if (checkBeforeWriteFile(newFilePath)){
                 processToWriteToFile(results, newFilePath);
             }else if(newFilePath.createNewFile()){
                 processToWriteToFile(results, newFilePath);
@@ -49,7 +51,7 @@ public class FileOutPuter {
         pw.close();
     }
 
-    private boolean checkBeforeWritefile(File file){
+    private boolean checkBeforeWriteFile(File file){
         if (file.exists()) {
             if (file.isFile() && file.canWrite()) {
                 return true;
