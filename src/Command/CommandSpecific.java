@@ -17,7 +17,5 @@ public class CommandSpecific {
 
     @Parameter(names={"--output", "-o"})
     private boolean output=false;
-    public boolean isOutput() {
-        return this.output;
-    }
+    public boolean isOutput() { return this.output; }
 }
