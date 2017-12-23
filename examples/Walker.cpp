@@ -5,16 +5,9 @@ Walker::Walker():
         reset();
 }
 
-/*
- * 主機能:45度単位で回転
- * rotation = 1 -> 反時計回り, rotation = -1 -> 時計回り
- *
- * beta機能:5度単位で回転
- * 精度はあまりよろしくない
- */
 void Walker::angleChange(int angle, int rotation) {
-    int32_t defaultAngleL;
-    int8_t dAngle = 75; // 45度におけるモーター回転数（床材によって変わる？）
+    int32_t defaultAngleL; //int 8
+    int8_t dAngle = 75;
 
     /*
      * 本来は45度単位だから、angleは45で割る
