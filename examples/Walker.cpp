@@ -6,8 +6,10 @@ Walker::Walker():
 }
 
 void Walker::angleChange(int angle, int rotation) {
-    int32_t defaultAngleL; //int 8
-    int8_t dAngle = 75;
+    int32_t defaultAngleL; /*int b*/
+
+    int8_t dAngle = 75;   //int 8
+    int32_t dAngle =21;
 
     /*
      * 本来は45度単位だから、angleは45で割る

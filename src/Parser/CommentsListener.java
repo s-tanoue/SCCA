@@ -123,40 +123,67 @@ public class CommentsListener extends CPP14BaseListener {
         List<Token> afterLineCommentChannel = getAfterHiddenTokens(ctx,CPP14Lexer.LINECOMMENT);
 
 
-        if(beforeBlockCommentChannel == null && beforeLineCommentChannel == null){
-                if(afterBlockCommentChannel == null  && afterLineCommentChannel == null){
-                    //あるステートメントに対してのコメントではないので出力する．
-                    outPutWhereNeedToComments(startToken);
-                }else if(afterBlockCommentChannel == null && afterLineCommentChannel != null ){
-                    //Blockコメントがnullじゃないとき，そのコメントは，同じ行にある可能性がある．
-                    //同じ行になければ，それはあるステートメントに対するコメントでない．
-                    int afterLineCommentLine = afterLineCommentChannel.get(0).getLine();
+        String afterComments="";
 
-                    if(stopToken.getLine() != afterLineCommentLine){
-                        outPutWhereNeedToComments(startToken);
-                    }
-                }else if(afterBlockCommentChannel != null && afterLineCommentChannel == null){
-                    //Blockコメントがnullじゃないとき，そのコメントは，同じ行にある可能性がある．
-                    //同じ行になければ，それはあるステートメントに対するコメントでない．
-                    int afterBlockCommentLine = afterBlockCommentChannel.get(0).getLine();
-                    if(stopToken.getLine() != afterBlockCommentLine){
-                        outPutWhereNeedToComments(startToken);
-                    }
-                    //両方のコメントがあるとき．
-                }else{
-                    int afterLineCommentLine = afterLineCommentChannel.get(0).getLine();
-                    int afterBlockCommentLine = afterBlockCommentChannel.get(0).getLine();
-
-                    //どちらかの一方のコメントが，同じ行にないときは出力する
-                    if(stopToken.getLine() != afterBlockCommentLine || stopToken.getLine() != afterLineCommentLine){
-                        outPutWhereNeedToComments(startToken);
-                    }
-                }
+        //TODO 条件分岐が複雑すぎる．真理値表を参照．
+        if(beforeBlockCommentChannel == null && beforeLineCommentChannel == null) {
+            afterComments = judgeLineComment(startToken, stopToken, afterBlockCommentChannel, afterLineCommentChannel);
+        }else if(beforeBlockCommentChannel == null && beforeLineCommentChannel != null ) {
+            if(afterComments.equals(beforeLineCommentChannel.get(0).getText())){
+            }else{
+                afterComments = judgeLineComment(startToken, stopToken, afterBlockCommentChannel, afterLineCommentChannel);
+            }
+        }else if(beforeBlockCommentChannel != null && beforeLineCommentChannel == null){
+            if(afterComments.equals(beforeBlockCommentChannel.get(0).getText())){
+            }else{
+                afterComments = judgeLineComment(startToken, stopToken, afterBlockCommentChannel, afterLineCommentChannel);
+            }
         }else {
-            //前にコメントがある．
+            if(afterComments.equals(beforeBlockCommentChannel.get(0).getText()) || afterBlockCommentChannel.equals(beforeLineCommentChannel.get(0).getText())){
+            }else{
+                afterComments = judgeLineComment(startToken, stopToken, afterBlockCommentChannel, afterLineCommentChannel);
+            }
         }
 
     }
+
+    //TODO　名前が良くない．
+    private String judgeLineComment(Token startToken, Token stopToken, List<Token> afterBlockCommentChannel, List<Token> afterLineCommentChannel) {
+
+        if(afterBlockCommentChannel == null  && afterLineCommentChannel == null){
+            //あるステートメントに対してのコメントではないので出力する．
+            outPutWhereNeedToComments(startToken);
+        }else if(afterBlockCommentChannel == null && afterLineCommentChannel != null ){
+            //Blockコメントがnullじゃないとき，そのコメントは，同じ行にある可能性がある．
+            //同じ行になければ，それはあるステートメントに対するコメントでない．
+            int afterLineCommentLine = afterLineCommentChannel.get(0).getLine();
+
+            if(stopToken.getLine() != afterLineCommentLine){
+                outPutWhereNeedToComments(startToken);
+            }
+            return afterLineCommentChannel.get(0).getText();
+        }else if(afterBlockCommentChannel != null && afterLineCommentChannel == null){
+            //Blockコメントがnullじゃないとき，そのコメントは，同じ行にある可能性がある．
+            //同じ行になければ，それはあるステートメントに対するコメントでない．
+            int afterBlockCommentLine = afterBlockCommentChannel.get(0).getLine();
+            if(stopToken.getLine() != afterBlockCommentLine){
+                outPutWhereNeedToComments(startToken);
+            }
+            return afterBlockCommentChannel.get(0).getText();
+            //両方のコメントがあるとき．
+        }else{
+            int afterLineCommentLine = afterLineCommentChannel.get(0).getLine();
+            int afterBlockCommentLine = afterBlockCommentChannel.get(0).getLine();
+
+            //どちらかの一方のコメントが，同じ行にないときは出力する
+            if(stopToken.getLine() != afterBlockCommentLine || stopToken.getLine() != afterLineCommentLine){
+                outPutWhereNeedToComments(startToken);
+            }
+            //TODO　これもreturn必要？
+        }
+        return "";
+    }
+
     //隠れているトークンを取得
     private List<Token> getBeforeHiddenTokens(ParserRuleContext ctx, int type){
         Token token= ctx.getStart();
