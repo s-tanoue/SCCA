@@ -1,6 +1,5 @@
 // Generated from /Users/satopi/Desktop/programing/java/Comments/src/CPP14.g4 by ANTLR 4.7
 package Parser;
-
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -274,11 +273,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTranslationunit(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTranslationunit(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TranslationunitContext translationunit() throws RecognitionException {
@@ -338,11 +332,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPrimaryexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPrimaryexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -440,11 +429,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitIdexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitIdexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final IdexpressionContext idexpression() throws RecognitionException {
@@ -512,11 +496,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUnqualifiedid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUnqualifiedid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -613,11 +592,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitQualifiedid(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitQualifiedid(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final QualifiedidContext qualifiedid() throws RecognitionException {
@@ -683,11 +657,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNestednamespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNestednamespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -829,11 +798,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLambdaexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLambdaexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LambdaexpressionContext lambdaexpression() throws RecognitionException {
@@ -885,11 +849,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLambdaintroducer(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLambdaintroducer(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -945,11 +904,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLambdacapture(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLambdacapture(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1011,11 +965,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCapturedefault(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCapturedefault(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CapturedefaultContext capturedefault() throws RecognitionException {
@@ -1066,11 +1015,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCapturelist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCapturelist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1170,11 +1114,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCapture(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCapture(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CaptureContext capture() throws RecognitionException {
@@ -1225,11 +1164,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitSimplecapture(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitSimplecapture(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1294,11 +1228,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInitcapture(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInitcapture(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1369,11 +1298,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLambdadeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLambdadeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1491,11 +1415,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPostfixexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPostfixexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1863,11 +1782,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExpressionlist(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExpressionlist(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExpressionlistContext expressionlist() throws RecognitionException {
@@ -1919,11 +1833,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPseudodestructorname(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPseudodestructorname(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2055,11 +1964,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUnaryexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUnaryexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2201,11 +2105,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUnaryoperator(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUnaryoperator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final UnaryoperatorContext unaryoperator() throws RecognitionException {
@@ -2263,11 +2162,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNewexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNewexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2390,11 +2284,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNewplacement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNewplacement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NewplacementContext newplacement() throws RecognitionException {
@@ -2440,11 +2329,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNewtypeid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNewtypeid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2500,11 +2384,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNewdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNewdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2583,11 +2462,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNoptrnewdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNoptrnewdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2693,11 +2567,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNewinitializer(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNewinitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NewinitializerContext newinitializer() throws RecognitionException {
@@ -2765,11 +2634,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeleteexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeleteexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2853,11 +2717,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNoexceptexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNoexceptexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NoexceptexpressionContext noexceptexpression() throws RecognitionException {
@@ -2908,11 +2767,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCastexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCastexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2974,11 +2828,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPmexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPmexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3075,11 +2924,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMultiplicativeexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMultiplicativeexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3189,11 +3033,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAdditiveexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAdditiveexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AdditiveexpressionContext additiveexpression() throws RecognitionException {
@@ -3293,11 +3132,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitShiftexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitShiftexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ShiftexpressionContext shiftexpression() throws RecognitionException {
@@ -3393,11 +3227,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitRelationalexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitRelationalexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3519,11 +3348,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEqualityexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEqualityexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EqualityexpressionContext equalityexpression() throws RecognitionException {
@@ -3620,11 +3444,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAndexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAndexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AndexpressionContext andexpression() throws RecognitionException {
@@ -3702,11 +3521,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExclusiveorexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExclusiveorexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3786,11 +3600,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInclusiveorexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInclusiveorexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final InclusiveorexpressionContext inclusiveorexpression() throws RecognitionException {
@@ -3869,11 +3678,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLogicalandexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLogicalandexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LogicalandexpressionContext logicalandexpression() throws RecognitionException {
@@ -3951,11 +3755,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLogicalorexpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLogicalorexpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4038,11 +3837,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitConditionalexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitConditionalexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ConditionalexpressionContext conditionalexpression() throws RecognitionException {
@@ -4115,11 +3909,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAssignmentexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAssignmentexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AssignmentexpressionContext assignmentexpression() throws RecognitionException {
@@ -4182,11 +3971,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAssignmentoperator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAssignmentoperator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4308,11 +4092,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExpressionContext expression() throws RecognitionException {
@@ -4388,11 +4167,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitConstantexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitConstantexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ConstantexpressionContext constantexpression() throws RecognitionException {
@@ -4455,11 +4229,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitStatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitStatement(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4625,11 +4394,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLabeledstatement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLabeledstatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LabeledstatementContext labeledstatement() throws RecognitionException {
@@ -4734,11 +4498,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExpressionstatement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExpressionstatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExpressionstatementContext expressionstatement() throws RecognitionException {
@@ -4788,11 +4547,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCompoundstatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCompoundstatement(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4848,11 +4602,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitStatementseq(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitStatementseq(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4935,11 +4684,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitSelectionstatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitSelectionstatement(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5042,11 +4786,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCondition(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCondition(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5155,11 +4894,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitIterationstatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitIterationstatement(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5293,11 +5027,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitForinitstatement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitForinitstatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ForinitstatementContext forinitstatement() throws RecognitionException {
@@ -5356,11 +5085,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitForrangedeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitForrangedeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ForrangedeclarationContext forrangedeclaration() throws RecognitionException {
@@ -5415,11 +5139,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitForrangeinitializer(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitForrangeinitializer(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5535,11 +5254,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitJumpstatement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitJumpstatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final JumpstatementContext jumpstatement() throws RecognitionException {
@@ -5638,11 +5352,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclarationstatement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclarationstatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final DeclarationstatementContext declarationstatement() throws RecognitionException {
@@ -5684,11 +5393,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclarationseq(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclarationseq(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5786,11 +5490,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclaration(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5914,11 +5613,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBlockdeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBlockdeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BlockdeclarationContext blockdeclaration() throws RecognitionException {
@@ -6018,11 +5712,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAliasdeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAliasdeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AliasdeclarationContext aliasdeclaration() throws RecognitionException {
@@ -6086,11 +5775,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitSimpledeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitSimpledeclaration(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6226,11 +5910,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitStatic_assertdeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitStatic_assertdeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Static_assertdeclarationContext static_assertdeclaration() throws RecognitionException {
@@ -6279,11 +5958,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEmptydeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEmptydeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EmptydeclarationContext emptydeclaration() throws RecognitionException {
@@ -6322,11 +5996,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributedeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributedeclaration(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6377,11 +6046,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclspecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclspecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6500,11 +6164,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclspecifierseq(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclspecifierseq(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final DeclspecifierseqContext declspecifierseq() throws RecognitionException {
@@ -6571,11 +6230,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitStorageclassspecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitStorageclassspecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final StorageclassspecifierContext storageclassspecifier() throws RecognitionException {
@@ -6624,11 +6278,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitFunctionspecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitFunctionspecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final FunctionspecifierContext functionspecifier() throws RecognitionException {
@@ -6675,11 +6324,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTypedefname(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTypedefname(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TypedefnameContext typedefname() throws RecognitionException {
@@ -6724,11 +6368,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTypespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTypespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6797,11 +6436,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTrailingtypespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTrailingtypespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6897,11 +6531,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTypespecifierseq(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTypespecifierseq(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TypespecifierseqContext typespecifierseq() throws RecognitionException {
@@ -6971,11 +6600,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTrailingtypespecifierseq(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTrailingtypespecifierseq(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7064,11 +6688,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitSimpletypespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitSimpletypespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7250,11 +6869,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitThetypename(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitThetypename(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ThetypenameContext thetypename() throws RecognitionException {
@@ -7322,11 +6936,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDecltypespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDecltypespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7403,11 +7012,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitElaboratedtypespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitElaboratedtypespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7524,11 +7128,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumname(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumname(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EnumnameContext enumname() throws RecognitionException {
@@ -7570,11 +7169,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumspecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumspecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7660,11 +7254,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumhead(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumhead(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7780,11 +7369,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitOpaqueenumdeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitOpaqueenumdeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final OpaqueenumdeclarationContext opaqueenumdeclaration() throws RecognitionException {
@@ -7849,11 +7433,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumkey(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumkey(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EnumkeyContext enumkey() throws RecognitionException {
@@ -7917,11 +7496,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumbase(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumbase(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EnumbaseContext enumbase() throws RecognitionException {
@@ -7965,11 +7539,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumeratorlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumeratorlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8049,11 +7618,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumeratordefinition(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumeratordefinition(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EnumeratordefinitionContext enumeratordefinition() throws RecognitionException {
@@ -8108,11 +7672,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitEnumerator(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitEnumerator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EnumeratorContext enumerator() throws RecognitionException {
@@ -8154,11 +7713,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNamespacename(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNamespacename(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8210,11 +7764,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitOriginalnamespacename(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitOriginalnamespacename(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final OriginalnamespacenameContext originalnamespacename() throws RecognitionException {
@@ -8256,11 +7805,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNamespacedefinition(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNamespacedefinition(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8317,11 +7861,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNamednamespacedefinition(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNamednamespacedefinition(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NamednamespacedefinitionContext namednamespacedefinition() throws RecognitionException {
@@ -8376,11 +7915,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitOriginalnamespacedefinition(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitOriginalnamespacedefinition(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8445,11 +7979,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExtensionnamespacedefinition(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExtensionnamespacedefinition(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExtensionnamespacedefinitionContext extensionnamespacedefinition() throws RecognitionException {
@@ -8510,11 +8039,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUnnamednamespacedefinition(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUnnamednamespacedefinition(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final UnnamednamespacedefinitionContext unnamednamespacedefinition() throws RecognitionException {
@@ -8571,11 +8095,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNamespacebody(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNamespacebody(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NamespacebodyContext namespacebody() throws RecognitionException {
@@ -8622,11 +8141,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNamespacealias(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNamespacealias(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NamespacealiasContext namespacealias() throws RecognitionException {
@@ -8667,11 +8181,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNamespacealiasdefinition(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNamespacealiasdefinition(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8722,11 +8231,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitQualifiednamespacespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitQualifiednamespacespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8781,11 +8285,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUsingdeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUsingdeclaration(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -8870,11 +8369,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUsingdirective(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUsingdirective(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final UsingdirectiveContext usingdirective() throws RecognitionException {
@@ -8940,11 +8434,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAsmdefinition(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAsmdefinition(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AsmdefinitionContext asmdefinition() throws RecognitionException {
@@ -8996,11 +8485,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLinkagespecification(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLinkagespecification(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9078,11 +8562,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributespecifierseq(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributespecifierseq(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AttributespecifierseqContext attributespecifierseq() throws RecognitionException {
@@ -9159,11 +8638,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributespecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributespecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AttributespecifierContext attributespecifier() throws RecognitionException {
@@ -9229,11 +8703,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAlignmentspecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAlignmentspecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9322,11 +8791,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributelist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributelist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9456,11 +8920,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttribute(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttribute(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AttributeContext attribute() throws RecognitionException {
@@ -9510,11 +8969,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributetoken(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributetoken(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9569,11 +9023,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributescopedtoken(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributescopedtoken(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AttributescopedtokenContext attributescopedtoken() throws RecognitionException {
@@ -9615,11 +9064,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributenamespace(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributenamespace(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AttributenamespaceContext attributenamespace() throws RecognitionException {
@@ -9658,11 +9102,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAttributeargumentclause(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAttributeargumentclause(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9709,11 +9148,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBalancedtokenseq(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBalancedtokenseq(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9796,11 +9230,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBalancedtoken(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBalancedtoken(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BalancedtokenContext balancedtoken() throws RecognitionException {
@@ -9876,11 +9305,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInitdeclaratorlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInitdeclaratorlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -9960,11 +9384,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInitdeclarator(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInitdeclarator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final InitdeclaratorContext initdeclarator() throws RecognitionException {
@@ -10022,11 +9441,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10089,11 +9503,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPtrdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPtrdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10163,11 +9572,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNoptrdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNoptrdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10326,11 +9730,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitParametersandqualifiers(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitParametersandqualifiers(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ParametersandqualifiersContext parametersandqualifiers() throws RecognitionException {
@@ -10417,11 +9816,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTrailingreturntype(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTrailingreturntype(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TrailingreturntypeContext trailingreturntype() throws RecognitionException {
@@ -10478,11 +9872,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPtroperator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPtroperator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10619,11 +10008,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCvqualifierseq(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCvqualifierseq(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CvqualifierseqContext cvqualifierseq() throws RecognitionException {
@@ -10672,11 +10056,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCvqualifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCvqualifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CvqualifierContext cvqualifier() throws RecognitionException {
@@ -10721,11 +10100,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitRefqualifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitRefqualifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10774,11 +10148,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDeclaratorid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDeclaratorid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10832,11 +10201,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitThetypeid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitThetypeid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10898,11 +10262,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAbstractdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAbstractdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -10980,11 +10339,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPtrabstractdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPtrabstractdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -11067,11 +10421,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNoptrabstractdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNoptrabstractdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -11235,11 +10584,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAbstractpackdeclarator(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAbstractpackdeclarator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AbstractpackdeclaratorContext abstractpackdeclarator() throws RecognitionException {
@@ -11309,11 +10653,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNoptrabstractpackdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNoptrabstractpackdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -11427,11 +10766,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitParameterdeclarationclause(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitParameterdeclarationclause(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ParameterdeclarationclauseContext parameterdeclarationclause() throws RecognitionException {
@@ -11509,11 +10843,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitParameterdeclarationlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitParameterdeclarationlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -11601,11 +10930,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitParameterdeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitParameterdeclaration(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -11758,11 +11082,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitFunctiondefinition(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitFunctiondefinition(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final FunctiondefinitionContext functiondefinition() throws RecognitionException {
@@ -11842,11 +11161,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitFunctionbody(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitFunctionbody(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -11936,11 +11250,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInitializer(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final InitializerContext initializer() throws RecognitionException {
@@ -12003,11 +11312,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBraceorequalinitializer(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBraceorequalinitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BraceorequalinitializerContext braceorequalinitializer() throws RecognitionException {
@@ -12066,11 +11370,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInitializerclause(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInitializerclause(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -12181,11 +11480,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitInitializerlist(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitInitializerlist(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final InitializerlistContext initializerlist() throws RecognitionException {
@@ -12281,11 +11575,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBracedinitlist(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBracedinitlist(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BracedinitlistContext bracedinitlist() throws RecognitionException {
@@ -12356,11 +11645,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClassname(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClassname(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ClassnameContext classname() throws RecognitionException {
@@ -12415,11 +11699,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClassspecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClassspecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -12486,11 +11765,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClasshead(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClasshead(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -12600,11 +11874,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClassheadname(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClassheadname(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ClassheadnameContext classheadname() throws RecognitionException {
@@ -12652,11 +11921,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClassvirtspecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClassvirtspecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ClassvirtspecifierContext classvirtspecifier() throws RecognitionException {
@@ -12695,11 +11959,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClasskey(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClasskey(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -12754,11 +12013,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMemberspecification(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMemberspecification(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -12911,11 +12165,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMemberdeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMemberdeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final MemberdeclarationContext memberdeclaration() throws RecognitionException {
@@ -13037,11 +12286,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMemberdeclaratorlist(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMemberdeclaratorlist(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final MemberdeclaratorlistContext memberdeclaratorlist() throws RecognitionException {
@@ -13132,11 +12376,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMemberdeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMemberdeclarator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -13253,11 +12492,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitVirtspecifierseq(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitVirtspecifierseq(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final VirtspecifierseqContext virtspecifierseq() throws RecognitionException {
@@ -13330,11 +12564,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitVirtspecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitVirtspecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final VirtspecifierContext virtspecifier() throws RecognitionException {
@@ -13383,11 +12612,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPurespecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPurespecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final PurespecifierContext purespecifier() throws RecognitionException {
@@ -13429,11 +12653,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBaseclause(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBaseclause(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -13478,11 +12697,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBasespecifierlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBasespecifierlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -13585,11 +12799,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBasespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBasespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -13711,11 +12920,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitClassordecltype(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitClassordecltype(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ClassordecltypeContext classordecltype() throws RecognitionException {
@@ -13778,11 +12982,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBasetypespecifier(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBasetypespecifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BasetypespecifierContext basetypespecifier() throws RecognitionException {
@@ -13821,11 +13020,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitAccessspecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitAccessspecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -13876,11 +13070,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitConversionfunctionid(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitConversionfunctionid(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ConversionfunctionidContext conversionfunctionid() throws RecognitionException {
@@ -13924,11 +13113,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitConversiontypeid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitConversiontypeid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -13982,11 +13166,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitConversiondeclarator(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitConversiondeclarator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ConversiondeclaratorContext conversiondeclarator() throws RecognitionException {
@@ -14036,11 +13215,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitCtorinitializer(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitCtorinitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CtorinitializerContext ctorinitializer() throws RecognitionException {
@@ -14084,11 +13258,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMeminitializerlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMeminitializerlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -14173,11 +13342,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMeminitializer(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMeminitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final MeminitializerContext meminitializer() throws RecognitionException {
@@ -14248,11 +13412,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitMeminitializerid(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitMeminitializerid(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final MeminitializeridContext meminitializerid() throws RecognitionException {
@@ -14306,11 +13465,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitOperatorfunctionid(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitOperatorfunctionid(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final OperatorfunctionidContext operatorfunctionid() throws RecognitionException {
@@ -14352,11 +13506,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLiteraloperatorid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLiteraloperatorid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -14420,11 +13569,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplatedeclaration(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplatedeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TemplatedeclarationContext templatedeclaration() throws RecognitionException {
@@ -14474,11 +13618,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplateparameterlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplateparameterlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -14558,11 +13697,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplateparameter(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplateparameter(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TemplateparameterContext templateparameter() throws RecognitionException {
@@ -14624,11 +13758,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTypeparameter(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTypeparameter(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -14832,11 +13961,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitSimpletemplateid(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitSimpletemplateid(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final SimpletemplateidContext simpletemplateid() throws RecognitionException {
@@ -14899,11 +14023,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplateid(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplateid(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -14991,11 +14110,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplatename(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplatename(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TemplatenameContext templatename() throws RecognitionException {
@@ -15037,11 +14151,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplateargumentlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplateargumentlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15144,11 +14253,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTemplateargument(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTemplateargument(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TemplateargumentContext templateargument() throws RecognitionException {
@@ -15213,11 +14317,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTypenamespecifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTypenamespecifier(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15292,11 +14391,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExplicitinstantiation(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExplicitinstantiation(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExplicitinstantiationContext explicitinstantiation() throws RecognitionException {
@@ -15350,11 +14444,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExplicitspecialization(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExplicitspecialization(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExplicitspecializationContext explicitspecialization() throws RecognitionException {
@@ -15403,11 +14492,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTryblock(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTryblock(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15458,11 +14542,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitFunctiontryblock(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitFunctiontryblock(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15521,11 +14600,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitHandlerseq(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitHandlerseq(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final HandlerseqContext handlerseq() throws RecognitionException {
@@ -15578,11 +14652,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitHandler(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitHandler(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15639,11 +14708,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExceptiondeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExceptiondeclaration(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15738,11 +14802,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitThrowexpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitThrowexpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ThrowexpressionContext throwexpression() throws RecognitionException {
@@ -15794,11 +14853,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitExceptionspecification(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitExceptionspecification(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15854,11 +14908,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitDynamicexceptionspecification(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitDynamicexceptionspecification(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -15916,11 +14965,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTypeidlist(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTypeidlist(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -16018,11 +15062,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitNoexceptspecification(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitNoexceptspecification(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NoexceptspecificationContext noexceptspecification() throws RecognitionException {
@@ -16082,11 +15121,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitRightShift(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitRightShift(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final RightShiftContext rightShift() throws RecognitionException {
@@ -16129,11 +15163,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitRightShiftAssign(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitRightShiftAssign(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -16182,11 +15211,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitTheoperator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitTheoperator(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -16542,11 +15566,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitLiteral(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitLiteral(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LiteralContext literal() throws RecognitionException {
@@ -16639,11 +15658,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitBooleanliteral(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitBooleanliteral(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BooleanliteralContext booleanliteral() throws RecognitionException {
@@ -16690,11 +15704,6 @@ public class CPP14Parser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitPointerliteral(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitPointerliteral(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final PointerliteralContext pointerliteral() throws RecognitionException {
@@ -16734,11 +15743,6 @@ public class CPP14Parser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof CPP14Listener ) ((CPP14Listener)listener).exitUserdefinedliteral(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof CPP14Visitor ) return ((CPP14Visitor<? extends T>)visitor).visitUserdefinedliteral(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 

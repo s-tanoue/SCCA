@@ -1,5 +1,4 @@
 // Generated from /Users/satopi/Desktop/programing/java/Comments/src/CPP14.g4 by ANTLR 4.7
-
 package Parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

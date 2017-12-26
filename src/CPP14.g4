@@ -50,6 +50,7 @@ if($val.text.compareTo("0")!=0) throw new InputMismatchException(this);
  ******************************************************************************/
 grammar CPP14;
 
+@header{package Parser;}
 @lexer::members {
     public static final int BLOCKCOMMENT = 1;
     public static final int LINECOMMENT = 2;

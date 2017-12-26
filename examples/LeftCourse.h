@@ -24,8 +24,9 @@ enum TrafficLight
 };
 
 struct Person {
-    char name[20];
-  // char sex;
+/*aaa*/
+    char name[20]; // char sex;
+    //weightのやつ
    double weight;
 };
 /**
@@ -38,7 +39,7 @@ public:
 	void run(){
     	int a;
 	}
-	/** NormalCourseエリアの処理 */
+	/*NormalCourseエリアの処理 */
 	void runNormalCourse();
 	void runTyokusen(float, float, bool);
 private:
