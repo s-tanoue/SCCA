@@ -114,36 +114,47 @@ public class CommentsListener extends CPP14BaseListener {
         return builder;
     }
 
+    //ここがもっとも重要なコード
     private void determineWhetherCommentIsNecessary(ParserRuleContext ctx) {
         Token startToken = ctx.getStart();
         Token stopToken = ctx.getStop();
         List<Token> beforeCommentChannel = getBeforeHiddenTokens(ctx, 1);
         List<Token> afterCommentChannel = getAfterHiddenTokens(ctx, 1);
 
-
+        int afterIndex = 0;
+        int beforeIndex = 0;
+        if(beforeCommentChannel != null){
+             beforeIndex = beforeCommentChannel.size() -1 ;
+        }
+        if(afterCommentChannel != null) {
+             afterIndex = afterCommentChannel.size() - 1;
+        }
         //TODO 条件分岐が複雑すぎる．真理値表を参照．
 
         if (beforeCommentChannel == null && afterCommentChannel == null) {
             outPutWhereNeedToComments(startToken);
         } else if (beforeCommentChannel == null && afterCommentChannel != null) {
             //後にあるコメントがステートメントに同じ行にない．
-            if (afterCommentChannel.get(0).getLine() != stopToken.getLine()) {
+            if (afterCommentChannel.get(afterIndex).getLine() != stopToken.getLine()) {
                 outPutWhereNeedToComments(startToken);
             } else {
                 //後にあるコメントが同じ行にあるときは，そのコメントは前のステートメントに対するコメントである．
-                afterComments = afterCommentChannel.get(0).getText();
+                afterComments = afterCommentChannel.get(afterIndex).getText();
             }
         } else if (beforeCommentChannel != null && afterCommentChannel == null) {
-            if (!(afterComments.equals(beforeCommentChannel.get(0).getText()))) {
+            //保持しているコメントと，以前のコメントが一緒じゃない．
+            if (!(afterComments.equals( beforeCommentChannel.get(beforeIndex).getText() ))) {
+            }else{
                 outPutWhereNeedToComments(startToken);
             }
         } else {
-            if (afterCommentChannel.get(0).getLine() != stopToken.getLine()) {
-                if (!(afterComments.equals(beforeCommentChannel.get(0).getText()))) {
+            if (afterCommentChannel.get(afterIndex).getLine() != stopToken.getLine()) {
+                if (!(afterComments.equals(beforeCommentChannel.get(beforeIndex).getText()))) {
+                }else{
                     outPutWhereNeedToComments(startToken);
                 }
             } else {
-                afterComments = afterCommentChannel.get(0).getText();
+                afterComments = afterCommentChannel.get(afterIndex).getText();
             }
 
         }

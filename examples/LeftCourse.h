@@ -4,6 +4,7 @@
  * @author Futa HIRAKOBA
  */
 
+int d;
 #ifndef __LEFT_COURSE__
 #define __LEFT_COURSE__
 
@@ -26,8 +27,8 @@ enum TrafficLight
 struct Person {
 /*aaa*/
     char name[20]; // char sex;
-    //weightのやつ
-   double weight;
+   double weight; //weightに対するコメント
+   double height;
 };
 /**
 * Lコースを走らせるときに呼び出されるクラス
@@ -39,6 +40,8 @@ public:
 	void run(){
     	int a;
 	}
+    /** タッチセンサが押されたときに行われる処理 */
+    void start( int );
 	/*NormalCourseエリアの処理 */
 	void runNormalCourse();
 	void runTyokusen(float, float, bool);
@@ -49,4 +52,5 @@ private:
 };
 
 
+int b;
 #endif
