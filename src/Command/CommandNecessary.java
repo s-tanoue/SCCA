@@ -8,14 +8,14 @@ import java.util.List;
 /**
  * Created by satopi on 2017/12/18.
  */
-public class CommandNeed {
+public class CommandNecessary {
     @Parameter(description = "The source code file to Analyze.")
     private ArrayList<String> files = new ArrayList<>();
     public ArrayList<String> getFiles() {
         return this.files;
     }
     //TODO CommandMainだけの記述でできるようにしたい．
-    //TODO scca specific ファイル名 -oでも動くようにしたい．mainに必要か？
+    //specific ファイル名 -oでも動くようにしたい．mainに必要か？
     @Parameter(names={"--output", "-o"})
     private boolean output=false;
 

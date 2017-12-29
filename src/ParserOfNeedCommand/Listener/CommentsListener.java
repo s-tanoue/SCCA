@@ -1,17 +1,15 @@
-package Parser;
+package ParserOfNeedCommand.Listener;
 
-import File.InfoForNeedComments;
-import com.google.gson.Gson;
+import File.FileInputer;
+import File.InfoForNecessaryComments;
+import ParserOfNeedCommand.Generated.CPP14BaseListener;
+import ParserOfNeedCommand.Generated.CPP14Parser;
 import org.antlr.v4.runtime.*;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by satopi on 2017/09/26.
+ * Created by Satoshi Tanoue on 2017/09/26.
  */
 public class CommentsListener extends CPP14BaseListener {
     private CommonTokenStream tokens;
@@ -20,14 +18,16 @@ public class CommentsListener extends CPP14BaseListener {
     private ArrayList<String> results = new ArrayList<String>();
     public List<String> getResults(){ return this.results; }
 
-    private InfoForNeedComments infoObj;
+    private InfoForNecessaryComments infoObj;
     String afterComments="";
 
     public CommentsListener(CommonTokenStream tokens, CPP14Parser parser) {
         this.tokens = tokens;
         this.parser = parser;
         //TODO 設定ファイルをオプションで選択できるようにした方がいい？
-        readConfigFile("Config/ConfigForNeedComments.json");
+        FileInputer fileInPuter = new FileInputer();
+        fileInPuter.readSettingFileForNecessaryComments("Config/SettingForNecessaryComments.json");
+        infoObj = fileInPuter.getInfoForNecessaryCommentsObj();
     }
 
     //enumの前にコメントが有るかどうか
@@ -80,38 +80,6 @@ public class CommentsListener extends CPP14BaseListener {
             System.out.println(result);
         }
 
-    }
-
-    public void readConfigFile(String path){
-        //BufferedReaderを作成．
-        BufferedReader bufferedReader = null;
-        try {
-            bufferedReader = new BufferedReader(new FileReader(path));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        //ファイルから読み込む
-        StringBuilder builder = getStringBuilder(bufferedReader);
-
-        String json = builder.toString();
-        Gson gson = new Gson();
-        this.infoObj = gson.fromJson(json,InfoForNeedComments.class);
-    }
-
-    //ファイルから読み込む
-    private StringBuilder getStringBuilder(BufferedReader bufferedReader) {
-        StringBuilder builder = new StringBuilder();
-        String string = null;
-        try {
-            string = bufferedReader.readLine();
-            while (string != null){
-                builder.append(string + System.getProperty("line.separator"));
-                string = bufferedReader.readLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return builder;
     }
 
     //ここがもっとも重要なコード
