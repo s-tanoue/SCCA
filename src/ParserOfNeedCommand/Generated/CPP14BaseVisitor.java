@@ -1,5 +1,5 @@
 // Generated from /Users/satopi/Desktop/programing/java/Comments/src/CPP14.g4 by ANTLR 4.7
-package Parser;
+package ParserOfNeedCommand.Generated;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**

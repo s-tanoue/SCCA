@@ -26,7 +26,7 @@ enum TrafficLight
 
 struct Person {
 /*aaa*/
-    char name[20]; // char sex;
+   char name[20]; // char sex;
    double weight; //weightに対するコメント
    double height;
 };
@@ -45,6 +45,7 @@ public:
 	/*NormalCourseエリアの処理 */
 	void runNormalCourse();
 	void runTyokusen(float, float, bool);
+	void afle();
 private:
     /** 自己位置推定 インスタンス 初期化*/
 	SelfLocalization sl;

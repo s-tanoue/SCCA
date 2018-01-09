@@ -4,8 +4,8 @@ package File;
  * Created by satopi on 2017/12/04.
  */
 
-//Jsonように利用しているクラス．
-public class InfoForNeedComments {
+//Jsonのために用意しているクラス
+public class InfoForNecessaryComments {
 
     private boolean SelectionsStatement;
 

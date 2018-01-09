@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<comments>
+    <comment type="TODOコメント">
+        <regExp>TODO</regExp>
+        <regExp>将来</regExp>
+        <regExp>しょうらい</regExp>
+        <regExp>未来</regExp>
+        <regExp>みらい</regExp>
+        <regExp>未対応</regExp>
+        <regExp>たいおう</regExp>
+        <regExp>今後</regExp>
+        <regExp>こんご</regExp>
+        <regExp>予定</regExp>
+        <regExp>よてい</regExp>
+        <regExp>(?i)TODO</regExp>
+    </comment>
+
+    <!--
+        <comment type="コードの繰り返しコメント">
+            <regExp>ループ</regExp>
+            <regExp>るーぷ</regExp>
+            <regExp>繰り返し</regExp>
+            <regExp>くりかえし</regExp>
+            <regExp>インクリメント</regExp>
+            <regExp>いんくりめんと</regExp>
+            <regExp>ブレーク</regExp>
+            <regExp>ぶれーく</regExp>
+            <regExp>抜ける</regExp>
+            <regExp>ぬける</regExp>
+        </comment>
+     -->
+
+    <comment type="改修履歴コメント">
+        <!-- 検出する日付フォーマットは以下
+             yyyy/mm/dd、yyyy.mm.dd、yyyy-mm-dd、yyyy年mm月dd日 (yyyyは2桁以上4桁以下)
+             ※ただし、「Copyright」および「(C)」を含む行は検出しない -->
+        <regExp>^(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?!.*(Copyright|\(C\))).+$</regExp>
+        <regExp>^(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]{0,1})(?!.*(Copyright|\(C\))).+$</regExp>
+        <!-- 改修コメントになり得る単語が日付とセットになっているコメント -->
+        <regExp>(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?=.*追加)</regExp>
+        <regExp>(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?=.*修正)</regExp>
+        <regExp>(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?=.*削除)</regExp>
+        <regExp>(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?=.*編集)</regExp>
+        <regExp>(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?=.*更新)</regExp>
+        <regExp>(?=.*\d{2,4}[.\-/年]\d{1,2}[.\-/月]\d{1,2}日{0,1})(?=.*変更)</regExp>
+    </comment>
+
+    <comment type="意図が曖昧なコメント">
+        <regExp>\?</regExp>
+        <regExp>暫定</regExp>
+        <regExp>ざんていてき</regExp>
+        <regExp>みてい</regExp>
+        <regExp>かり</regExp>
+        <regExp>曖昧</regExp>
+        <regExp>あいまい</regExp>
+        <regExp>とりあえず</regExp>
+        <regExp>ひとまず</regExp>
+        <!-- 「未定義」以外で「未定」を含む行を検出する -->
+        <regExp>^(?!.*未定義).*(?=未定).*$</regExp>
+        <!-- 「仮想」以外で「仮」を含む行を検出する -->
+        <regExp>^(?!.*仮想).*(?=仮).*$</regExp>
+    </comment>
+
+    <comment type="理解不足であるために追加しているコメント">
+        <regExp>何故</regExp>
+        <regExp>なぜ</regExp>
+        <regExp>分からない</regExp>
+        <regExp>わからない</regExp>
+        <regExp>不安</regExp>
+        <regExp>ふあん</regExp>
+        <regExp>理解不足</regExp>
+        <regExp>りかいぶそく</regExp>
+        <regExp>バグ</regExp>
+        <regExp>ばぐ</regExp>
+        <regExp>たぶん</regExp>
+        <regExp>きっと</regExp>
+        <regExp>おそらく</regExp>
+        <regExp>かもしれない</regExp>
+        <regExp>\?</regExp>
+        <regExp>？</regExp>
+    </comment>
+
+    <comment type="ソースコードコメント">
+        <regExp>ここから</regExp>
+        <regExp>ここまで</regExp>
+    </comment>
+
+</comments>

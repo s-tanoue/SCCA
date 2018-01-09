@@ -8,18 +8,17 @@ import java.util.List;
 /**
  * Created by satopi on 2017/12/03.
  */
-public class FileOutPuter {
+public class FileOutputer {
     private String fileName;
     private File filePath;
     //書き込むファイルのファイルパス
     private File newFilePath;
 
-    public FileOutPuter(File filePath){
+    public FileOutputer(File filePath){
         this.filePath = filePath;
         this.fileName = filePath.getName();
 
         this.newFilePath = new File("Results/" +fileName);
-
     }
     public void outPutToFile(List<String> results)  {
         try{
