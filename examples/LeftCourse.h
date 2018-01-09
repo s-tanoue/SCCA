@@ -43,15 +43,20 @@ public:
     /** タッチセンサが押されたときに行われる処理 */
     void start( int );
 	/*NormalCourseエリアの処理 */
+	//TODO
 	void runNormalCourse();
 	void runTyokusen(float, float, bool);
 	void afle();
 private:
-    /** 自己位置推定 インスタンス 初期化*/
-	SelfLocalization sl;
-	Navigation navi;    	
+	SelfLocalization sl; /** 自己位置推定 インスタンス 初期化*/
+	SelfLocalization sd; /** 自己位置推定 インスタンス 初期化*/
+	SelfLocalization se; //seに対するコメント
+	Navigation navi;
+	//seに対するコメント
+	SelfLocalization sj;
+	SelfLocalization sk;
+	SelfLocalization sk; //seに対するコメント
 };
-
 
 int b;
 #endif

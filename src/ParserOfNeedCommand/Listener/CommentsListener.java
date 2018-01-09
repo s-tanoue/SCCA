@@ -37,9 +37,8 @@ public class CommentsListener extends CPP14BaseListener {
     }
     //クラス名の前
     @Override
-    public void enterClasshead(CPP14Parser.ClassheadContext ctx){
-        determineWhetherCommentIsNecessary(ctx);
-    }
+    public void enterClasshead(CPP14Parser.ClassheadContext ctx){ determineWhetherCommentIsNecessary(ctx); }
+
     //関数定義の前
     @Override
     public void enterFunctiondefinition(CPP14Parser.FunctiondefinitionContext ctx){

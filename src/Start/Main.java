@@ -1,3 +1,5 @@
+package Start;
+
 import ParserOfNeedCommand.Generated.CPP14Lexer;
 import ParserOfNeedCommand.Generated.CPP14Parser;
 import ParserOfNeedCommand.Listener.CommentsListener;
@@ -49,7 +51,7 @@ public class Main {
             jCommander.usage();
         }
     }
-    private static CommentsListener startDefectWhetherCommentsAreNecessary(String filePath){
+    public static CommentsListener startDefectWhetherCommentsAreNecessary(String filePath){
         // create a CharStream that reads from standard input
         try {
             CharStream input = CharStreams.fromFileName(filePath);
@@ -78,7 +80,7 @@ public class Main {
         //これnullを返していいの？
         return null;
     }
-    private static void startDefectSpecificComments(String filePath){
+    public static void startDefectSpecificComments(String filePath){
 
         FileInputer fileInPuter = new FileInputer(filePath);
         String inputStrings = fileInPuter.getInputStrings();
