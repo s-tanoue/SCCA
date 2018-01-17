@@ -26,7 +26,6 @@ class CommentsListenerTest {
         expected.add("48行目の voidの前にコメントが必要です");
         expected.add("49行目の voidの前にコメントが必要です");
         expected.add("54行目の Navigationの前にコメントが必要です");
-        expected.add("56行目の SelfLocalizationの前にコメントが必要です");
         expected.add("57行目の SelfLocalizationの前にコメントが必要です");
         expected.add("61行目の intの前にコメントが必要です");
 

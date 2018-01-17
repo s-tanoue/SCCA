@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * Created by Satoshi Tanoue on 2017/09/26.
  */
+
 public class CommentsListener extends CPP14BaseListener {
     private CommonTokenStream tokens;
     private CPP14Parser parser;
@@ -19,7 +20,7 @@ public class CommentsListener extends CPP14BaseListener {
     public List<String> getResults(){ return this.results; }
 
     private InfoForNecessaryComments infoObj;
-    String afterComments="";
+    int previusComments = -100;
 
     public CommentsListener(CommonTokenStream tokens, CPP14Parser parser) {
         this.tokens = tokens;
@@ -88,42 +89,39 @@ public class CommentsListener extends CPP14BaseListener {
         List<Token> beforeCommentChannel = getBeforeHiddenTokens(ctx, 1);
         List<Token> afterCommentChannel = getAfterHiddenTokens(ctx, 1);
 
-        int afterIndex = 0;
         int beforeIndex = 0;
+        int afterIndex = 0;
+
         if(beforeCommentChannel != null){
              beforeIndex = beforeCommentChannel.size() -1 ;
         }
-        if(afterCommentChannel != null) {
-             afterIndex = afterCommentChannel.size() - 1;
-        }
+
         //TODO 条件分岐が複雑すぎる．真理値表を参照．
 
         if (beforeCommentChannel == null && afterCommentChannel == null) {
             outPutWhereNeedToComments(startToken);
         } else if (beforeCommentChannel == null && afterCommentChannel != null) {
-            //後にあるコメントがステートメントに同じ行にない．
+            //後にあるコメントがステートメントと同じ行にある．
             if (afterCommentChannel.get(afterIndex).getLine() != stopToken.getLine()) {
                 outPutWhereNeedToComments(startToken);
             } else {
-                //後にあるコメントが同じ行にあるときは，そのコメントは前のステートメントに対するコメントである．
-                afterComments = afterCommentChannel.get(afterIndex).getText();
+                previusComments = afterCommentChannel.get(afterIndex).getTokenIndex();
             }
         } else if (beforeCommentChannel != null && afterCommentChannel == null) {
             //保持しているコメントと，以前のコメントが一緒じゃない．
-            if (!(afterComments.equals( beforeCommentChannel.get(beforeIndex).getText() ))) {
+            if ((previusComments != beforeCommentChannel.get(beforeIndex).getTokenIndex() )) {
             }else{
                 outPutWhereNeedToComments(startToken);
             }
         } else {
             if (afterCommentChannel.get(afterIndex).getLine() != stopToken.getLine()) {
-                if (!(afterComments.equals(beforeCommentChannel.get(beforeIndex).getText()))) {
-                }else{
+                if (previusComments != beforeCommentChannel.get(beforeIndex).getTokenIndex()) {
+                } else {
                     outPutWhereNeedToComments(startToken);
                 }
             } else {
-                afterComments = afterCommentChannel.get(afterIndex).getText();
+                previusComments = afterCommentChannel.get(afterIndex).getTokenIndex();
             }
-
         }
     }
     //隠れているトークンを取得

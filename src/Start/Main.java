@@ -9,6 +9,7 @@ import ParserOfSpecificCommand.Dicitonary.CommentsDictionary;
 import com.beust.jcommander.JCommander;
 
 import com.google.gson.Gson;
+import org.antlr.v4.gui.Trees;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -69,7 +70,7 @@ public class Main {
             CommentsListener extractor = new CommentsListener(tokens,parser);
             walker.walk(extractor,tree);
             //構文木を表示
-            //Trees.inspect(tree,parser);
+            Trees.inspect(tree,parser);
             return extractor;
 
         } catch (FileNotFoundException e) {

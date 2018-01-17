@@ -46,13 +46,15 @@ public:
 	//TODO
 	void runNormalCourse();
 	void runTyokusen(float, float, bool);
-	void afle();
+	void afle();/*afle*/
+	//afle
+	int e;
 private:
 	SelfLocalization sl; /** 自己位置推定 インスタンス 初期化*/
 	SelfLocalization sd; /** 自己位置推定 インスタンス 初期化*/
 	SelfLocalization se; //seに対するコメント
 	Navigation navi;
-	//seに対するコメント
+    //seに対するコメント
 	SelfLocalization sj;
 	SelfLocalization sk;
 	SelfLocalization sk; //seに対するコメント
