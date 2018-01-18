@@ -1,4 +1,4 @@
 {
-  "SelectionsStatement" : "false",
-  "IterationsStatement": "false"
+  "SelectionsStatement" : "true",
+  "IterationsStatement": "true"
 }

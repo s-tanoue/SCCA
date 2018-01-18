@@ -1,3 +1,5 @@
+package Start;
+
 import ParserOfNeedCommand.Generated.CPP14Lexer;
 import ParserOfNeedCommand.Generated.CPP14Parser;
 import ParserOfNeedCommand.Listener.CommentsListener;
@@ -7,6 +9,7 @@ import ParserOfSpecificCommand.Dicitonary.CommentsDictionary;
 import com.beust.jcommander.JCommander;
 
 import com.google.gson.Gson;
+import org.antlr.v4.gui.Trees;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -49,7 +52,7 @@ public class Main {
             jCommander.usage();
         }
     }
-    private static CommentsListener startDefectWhetherCommentsAreNecessary(String filePath){
+    public static CommentsListener startDefectWhetherCommentsAreNecessary(String filePath){
         // create a CharStream that reads from standard input
         try {
             CharStream input = CharStreams.fromFileName(filePath);
@@ -67,7 +70,7 @@ public class Main {
             CommentsListener extractor = new CommentsListener(tokens,parser);
             walker.walk(extractor,tree);
             //構文木を表示
-            //Trees.inspect(tree,parser);
+            Trees.inspect(tree,parser);
             return extractor;
 
         } catch (FileNotFoundException e) {
@@ -78,7 +81,7 @@ public class Main {
         //これnullを返していいの？
         return null;
     }
-    private static void startDefectSpecificComments(String filePath){
+    public static void startDefectSpecificComments(String filePath){
 
         FileInputer fileInPuter = new FileInputer(filePath);
         String inputStrings = fileInPuter.getInputStrings();

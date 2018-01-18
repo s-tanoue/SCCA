@@ -1,0 +1,47 @@
+options {
+  STATIC=false;
+  UNICODE_INPUT =true;
+}
+
+PARSER_BEGIN(ParseGettingAllComments)
+  package ParserOfSpecificCommand;
+  import java.util.ArrayList;
+  
+public class ParseGettingAllComments{
+}
+PARSER_END(ParseGettingAllComments)
+
+SKIP :{
+    <  SPACE:([" ","\t","\r","\f"])+ >
+}
+
+TOKEN :
+{
+       <LINE_COMMENT:"//"(~["\n","\r"])* ("\n"|"\r\n" | "\r")? >
+       | < BLOCK_COMMENT: "/*" (~["*"])*("*")+ (~["/","*"](~["*"])*("*")+)* "/" >
+       | < OTHERS:~[] >
+}
+ArrayList<String> comment():
+{
+    Token lineComment,blockComment;
+    String firstOthers,lastOthers;
+    ArrayList<String> result = new ArrayList<String>();
+   
+}
+{
+      ( (< OTHERS >)*
+          (lineComment = < LINE_COMMENT >
+          {
+            result.add(lineComment.image);
+          }
+          | blockComment =< BLOCK_COMMENT >
+          {
+            result.add(blockComment.image);
+          }
+          )
+         (< OTHERS >)* )*
+      {
+               return result;
+      }
+
+}
