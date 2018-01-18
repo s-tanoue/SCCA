@@ -2,18 +2,6 @@
 
 
 
-
-Walker::Walker(){
-}
-
-
-/*aa*/
-typedef /*aa*/  struct employee {
-    char name[12];
-    double hours;
-    int wage;
-} EMPLOYEE;
-
 void Walker::angleChange(int angle, int rotation) {
 
     StretchVector *vector;
@@ -55,6 +43,17 @@ void Walker::angleChange(int angle, int rotation) {
     }
     stop();
 }
+
+Walker::Walker(){
+}
+
+
+/*aa*/
+typedef struct employee {
+    char name[12];
+    double hours;
+    int wage;
+} EMPLOYEE;
 
 
 

@@ -50,10 +50,8 @@ if($val.text.compareTo("0")!=0) throw new InputMismatchException(this);
  ******************************************************************************/
 grammar CPP14;
 
-@header{package ParserOfNeedCommand;}
+@header{}
 @lexer::members {
-    public static final int BLOCKCOMMENT = 1;
-    public static final int LINECOMMENT = 2;
 }
 
 /*Basic concepts*/
@@ -2350,11 +2348,11 @@ Newline
 
 BlockComment
 :
-    '/*' .*? '*/' -> channel(1)
+    '/*' .*? '*/' -> channel(2)
 ;
 
 LineComment
 :
 
-    '//' ~[\r\n]* -> channel(1)
+    '//' ~[\r\n]* -> channel(2)
 ;

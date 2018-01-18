@@ -24,12 +24,12 @@ enum TrafficLight
     GREEN
 };
 
-struct Person {
+typedef struct Person {
 /*aaa*/
    char name[20]; // char sex;
    double weight; //weightに対するコメント
    double height;
-};
+}END;
 /**
 * Lコースを走らせるときに呼び出されるクラス
 */

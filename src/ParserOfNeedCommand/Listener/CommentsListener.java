@@ -31,15 +31,11 @@ public class CommentsListener extends CPP14BaseListener {
         infoObj = fileInPuter.getInfoForNecessaryCommentsObj();
     }
 
-    //enumの前にコメントが有るかどうか
-    @Override
-    public void enterEnumhead(CPP14Parser.EnumheadContext ctx) {
-        determineWhetherCommentIsNecessary(ctx);
-    }
-    //クラス名の前
-    @Override
-    public void enterClasshead(CPP14Parser.ClassheadContext ctx){ determineWhetherCommentIsNecessary(ctx); }
-
+    //    //自作された型のポインタ
+//    @Override
+//    public void enterExpressionstatement(CPP14Parser.ExpressionstatementContext ctx){
+//        determineWhetherCommentIsNecessary(ctx);
+//    }
     //関数定義の前
     @Override
     public void enterFunctiondefinition(CPP14Parser.FunctiondefinitionContext ctx){
@@ -86,8 +82,8 @@ public class CommentsListener extends CPP14BaseListener {
     private void determineWhetherCommentIsNecessary(ParserRuleContext ctx) {
         Token startToken = ctx.getStart();
         Token stopToken = ctx.getStop();
-        List<Token> beforeCommentChannel = getBeforeHiddenTokens(ctx, 1);
-        List<Token> afterCommentChannel = getAfterHiddenTokens(ctx, 1);
+        List<Token> beforeCommentChannel = getBeforeHiddenTokens(ctx, 2);
+        List<Token> afterCommentChannel = getAfterHiddenTokens(ctx, 2);
 
         int beforeIndex = 0;
         int afterIndex = 0;
